@@ -1,3 +1,13 @@
+terraform {
+  backend "remote" {
+    hostname = "app.terraform.io"
+    organization = "johnc"
+    workspaces {
+      name = "lz"
+    }
+  }
+}
+
 provider "aws" {
   version = "2.33.0"
 
